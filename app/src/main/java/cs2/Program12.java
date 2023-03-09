@@ -41,5 +41,7 @@ public class Program12 {
 			System.out.println(
 					base + " to the power of " + exponent + " is " + power(base, exponent));
 		}
+
+		sc.close();
 	}
 }
