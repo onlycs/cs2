@@ -175,6 +175,11 @@ public class Program06 {
 			boolean won =
 					Arrays.stream(board).flatMap(Arrays::stream).noneMatch(s -> s == Square.SHIP);
 
+			if (shots == 0 && !won) {
+				System.out.println("You lose");
+				System.exit(0);
+			}
+
 			if (won)
 				break;
 		}
