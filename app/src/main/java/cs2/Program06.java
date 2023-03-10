@@ -1,3 +1,9 @@
+// Angad Tendulkar
+// Period 6
+// Program 6
+
+// This program is a game of battleship
+
 package cs2;
 
 import java.util.*;
@@ -38,10 +44,11 @@ public class Program06 {
 		int row = (int) (Math.random() * board.length);
 		int col = (int) (Math.random() * board[0].length);
 
-		// select a random direction for the ship
-		boolean direction_possible = false;
 
+		// make a while loop that will pick a random direction, check if a boat will fit, if it does add the boat and exit the loop, and if it doesn't, loops again
+		boolean direction_possible = false;
 		while (!direction_possible) {
+			// pick a random direction
 			int direction = (int) (Math.random() * 4);
 			switch (direction) {
 				case 0: // up
