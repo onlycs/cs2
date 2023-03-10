@@ -1,3 +1,9 @@
+// Angad Tendulkar
+// Period 6
+// Program 8
+
+// This program will check if a number is prime and check primes 1-100
+
 package cs2;
 
 import java.util.ArrayList;
@@ -48,6 +54,10 @@ class Options {
 public class Program08 {
 	public static boolean is_prime(int i) {
 		// This program will determine if i is prime
+		
+		if (i==1) {
+			return false;
+		}
 
 		// loop over every number from 2 to i
 		for (int j = 2; j < i; j++) {
