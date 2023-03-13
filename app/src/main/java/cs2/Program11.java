@@ -10,13 +10,17 @@ package cs2;
 import java.util.Scanner;
 
 public class Program11 {
-	public static void squareOfAsterisks(int n, char fillChar) {
+	public static void squareOfAsterisks(int n, String fillChar) {
 		for (int i = 0; i < n; i++) {
 			for (int j = 0; j < n; j++) {
 				System.out.print(fillChar + " ");
 			}
 			System.out.println();
 		}
+	}
+	
+	public static void squareOfAsterisks(int n) {
+		squareOfAsterisks(n, "#");
 	}
 
 	public static void main(String[] args) {
@@ -32,7 +36,7 @@ public class Program11 {
 			if (n == 0) {
 				break;
 			}
-			squareOfAsterisks(n, fillChar.charAt(0));
+			squareOfAsterisks(n, Character.toString(fillChar.charAt(0)));
 		}
 
 		sc.close();
