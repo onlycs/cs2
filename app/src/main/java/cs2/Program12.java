@@ -45,3 +45,20 @@ public class Program12 {
 		sc.close();
 	}
 }
+
+/*
+Enter a base (-1 to quit): 3
+Enter an exponent (-1 to quit): 4
+3 to the power of 4 is 81
+Enter a base (-1 to quit): -1
+
+Enter a base (-1 to quit): 7
+Enter an exponent (-1 to quit): 9
+7 to the power of 9 is 40353607
+Enter a base (-1 to quit): -1
+
+Enter a base (-1 to quit): 10
+Enter an exponent (-1 to quit): 10
+10 to the power of 10 is 10000000000
+Enter a base (-1 to quit): -1
+ */
