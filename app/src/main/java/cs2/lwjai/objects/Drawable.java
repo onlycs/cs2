@@ -4,11 +4,25 @@ import java.awt.*;
 import cs2.lwjai.Animation;
 import cs2.lwjai.Ticker;
 
-public abstract class Drawable {
-	public abstract void draw(Graphics g);
-	public abstract void use_ticker(Ticker ticker);
-	public abstract Drawable flash_every(int ticks);
-	public abstract Drawable add_animation(Animation animation);
+public class Drawable {
+	public void draw(Graphics g) {
+		javax.swing.JOptionPane.showMessageDialog(null, "the -- void draw(Graphics g) -- method MUST be extended");
+		throw new UnsupportedOperationException("the -- void draw(Graphics g) -- method MUST be extended");
+	}
+
+	public void use_ticker(Ticker ticker) {
+		javax.swing.JOptionPane.showMessageDialog(null, "the -- void use_ticker(Ticker ticker) -- method MUST be extended");
+		throw new UnsupportedOperationException("the -- void use_ticker(Ticker ticker) -- method MUST be extended");
+	}
+
+	public Drawable flash_every(int ticks) {
+		javax.swing.JOptionPane.showMessageDialog(null, "the -- Drawable flash_every(int ticks) -- method MUST be extended");
+		throw new UnsupportedOperationException("the -- Drawable flash_every(int ticks) -- method MUST be extended");
+	}
+
+	public Drawable add_animation(Animation animation) {
+		return this;
+	}
 
 	public void add_to(Drawable.Cache cache) {
 		cache.add(this);

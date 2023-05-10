@@ -247,4 +247,8 @@ public class Animation {
 	public int calculate_next(long tick, int start_val, int end_val) {
 		return (int) calculate_next(tick, (double) start_val, (double) end_val);
 	}
+
+	public double calculate_next_dil(long tick, double start_val, double end_val) {
+		return calculate_total(tick, start_val, end_val) / calculate_total(tick-1, start_val, end_val);
+	}
 }

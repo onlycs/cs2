@@ -118,7 +118,7 @@ public class Polygon extends Drawable {
 
 		for (int i = 0; i < x.length; i++) {
 			// calculate distance between point and (ctrx, ctry)
-			double distance = (double) Math.sqrt(Math.pow(x[i] - center_x, 2) + Math.pow(y[i] - center_y, 2));
+			double distance = Math.sqrt(Math.pow(x[i] - center_x, 2) + Math.pow(y[i] - center_y, 2));
 
 			// get angle between line connecting points and point
 			double angle = Math.atan2(y[i] - center_y, x[i] - center_x) + rad;
@@ -173,7 +173,7 @@ public class Polygon extends Drawable {
 			}
 		}
 
-		if (true) {
+		if (showing) {
 			Color old_color = g.getColor();
 			
 			if (color != null) {
@@ -189,7 +189,7 @@ public class Polygon extends Drawable {
 						translate(translate_x, translate_y);
 						break;
 					case Animation.Type.Dilation:
-						double scale = anim.calculate_next(ticker.get_ticks(), 0, anim.scale);
+						double scale = anim.calculate_next_dil(ticker.get_ticks(), 0, anim.scale);
 						
 						if (anim.use_center) {
 							dilate(scale, anim.center_x, anim.center_y);

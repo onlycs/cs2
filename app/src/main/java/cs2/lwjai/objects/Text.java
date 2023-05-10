@@ -92,6 +92,20 @@ public class Text extends Drawable {
 			}
 		}
 
-		g.setColor(color);
+		Color old_color = g.getColor();
+		Font old_font = g.getFont();
+
+		if (color != null) {
+			g.setColor(color);
+		}
+
+		if (font != null) {
+			g.setFont(font);
+		}
+
+		g.drawString(text, x, y);
+
+		g.setColor(old_color);
+		g.setFont(old_font);
 	}
 }

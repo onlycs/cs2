@@ -8,7 +8,7 @@ import java.applet.*;
 import java.awt.*;
 import cs2.lwjai.objects.Drawable;
 
-public abstract class LWJAI extends Applet implements Runnable {
+public class LWJAI extends Applet implements Runnable {
     public Ticker ticker = new Ticker();
     
 	Thread this_thread = null;
@@ -62,7 +62,17 @@ public abstract class LWJAI extends Applet implements Runnable {
         cache.draw(g);
     }
 
-	public abstract void applet_init();
-    public abstract void declare_drawables(Drawable.Cache cache);
-	public abstract boolean debug();
+	public void applet_init() {
+		javax.swing.JOptionPane.showMessageDialog(null, "the -- void applet_init() -- method MUST be extended");
+		throw new UnsupportedOperationException("the -- void applet_init() -- method MUST be extended");
+	}
+
+    public void declare_drawables(Drawable.Cache cache) {
+		javax.swing.JOptionPane.showMessageDialog(null, "the -- void declare_drawables(Drawable.Cache cache) -- method MUST be extended");
+		throw new UnsupportedOperationException("the -- void declare_drawables(Drawable.Cache cache) -- method MUST be extended");
+	}
+
+	public boolean debug() {
+		return false;
+	}
 }
